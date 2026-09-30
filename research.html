@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Daria Chalkova</title>
+<meta name="description" content="Research interests of Daria Chalkova: uncertainty-aware genome annotation for neglected apicomplexan parasites.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="header-inner">
+      <div class="avatar"><img src="assets/profile.jpg" alt="Portrait of Daria Chalkova"></div>
+      <div class="header-text">
+        <h1>Daria Chalkova</h1>
+        <div class="tagline">PhD Researcher, Bioinformatics &amp; AI for Genomics — Temple University</div>
+        <div class="header-badges">
+          <span class="badge">Institute for Genomics and Evolutionary Medicine</span>
+          <span class="badge rose">Pond Lab &amp; Escalante Lab</span>
+        </div>
+      </div>
+    </div>
+    <nav class="tabs" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="lede">How do we know how much to trust a predicted gene when there is no verified answer key to check it against?</p>
+
+  <p>Every tool that finds genes in a genome — a decades-old statistical method or a modern AI model — has to guess where a gene starts, where it ends, and how its pieces fit together, and these tools tend to report that guess with more confidence than the evidence actually supports. They are also built and tested almost entirely on a handful of well-studied organisms, such as humans, mice, and crop plants. My research instead focuses on neglected apicomplexan parasites, whose compact and irregular gene structure causes standard annotation methods to fail quietly rather than visibly.</p>
+
+  <div class="interest-list">
+    <span class="tag">Genome annotation</span>
+    <span class="tag">Uncertainty quantification</span>
+    <span class="tag">Comparative genomics</span>
+    <span class="tag">Machine learning for genomics</span>
+    <span class="tag">Parasite genomics (Apicomplexa)</span>
+  </div>
+
+  <div class="projects">
+    <div class="project-card">
+      <h3>Uncertainty-Aware Genome Annotation</h3>
+      <p>A framework that scores every predicted gene not with a single confidence number, but four: how much independent methods agree with each other, how well the prediction matches expressed RNA, how consistent it is with related species, and how confident the underlying model itself is. Splitting confidence this way means a low score can be traced to a specific, useful cause rather than reported as an unexplained warning.</p>
+      <div class="tag-row"><span class="tag">Confidence decomposition</span><span class="tag">Evidence benchmarking</span></div>
+    </div>
+    <div class="project-card">
+      <h3>Rethinking Gene-Finding for Unusual Genomes</h3>
+      <p>An alternative approach to finding genes in the first place, adapting a technique originally built for locating events in video to locate genes in DNA. It is being evaluated specifically on organisms whose compact, irregular gene structure causes standard hidden-Markov-model-based methods to fail.</p>
+      <div class="tag-row"><span class="tag">Non-HMM prediction</span><span class="tag">Neglected pathogens</span></div>
+    </div>
+  </div>
+
+  <p style="color:var(--text-muted); font-size:14.5px;">Longer term, the goal is a calibrated, well-documented sense of where a genome annotation can and cannot be trusted — a resource researchers on any under-studied organism can use immediately, independent of which prediction tool eventually wins out.</p>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Daria Chalkova</span>
+    <span>Built with plain HTML &amp; CSS · hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
